@@ -1,0 +1,17 @@
+.nav{
+    grid-area: n;
+    background-color: rgb(63, 66, 88);    
+    font-size: 16px;
+    
+}
+
+.navbar_item a{
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.navbar_item a.activeLink{
+    color: red;
+}

@@ -1,0 +1,25 @@
+.profile_posts{
+    padding-top: 20px;
+}
+
+.profile_post{
+
+}
+
+.profile_message{
+    margin-top: -35px;
+    margin-left: 70px;
+    width: 300px;
+    word-break:break-all;
+}
+
+.avatar_img{
+    width: 50px;
+}
+
+.like_img{
+    width: 30px;
+    margin-left: 380px;
+    margin-top: -450px;
+}
+
