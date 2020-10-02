@@ -2,13 +2,9 @@ import React from 'react';
 import pi from "./MyPosts.module.css";  //pi-profile items
 import Post from './Post/Post';
 
-const MyPosts = () => {
-  let Posts =[
-    {id:'1', message:'Hi', likesCounter:256},
-    {id:'2', message:'How is your project going?', likesCounter:652},
-]
+const MyPosts = (props) => {
 
-  let postsElements = Posts.map(p => <Post id={p.id} message={p.message} likesCounter={p.likesCounter} />); //p-post
+  let postsElements = props.posts.map(p => <Post id={p.id} message={p.message} likesCounter={p.likesCounter} />); //p-post
 
   return (
   <div className={pi.profile_block}>

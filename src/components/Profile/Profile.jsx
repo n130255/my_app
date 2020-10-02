@@ -4,10 +4,11 @@ import pi from "./Profile.module.css";  //pi-profile items
 import ps from "./MyPost/MyPosts.module.css";  //ps-post settings
 import ProfileInfo from './ProfileInfo/ProfileInfo.jsx';
 
-const Profile = () =>{
+const Profile = (props) =>{
   return <div>
     <ProfileInfo />
-    <MyPosts />
+    
+    <MyPosts posts={props.state.posts}/>
   </div>
 }
 

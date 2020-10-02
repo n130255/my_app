@@ -9,15 +9,16 @@ import News from './components/News/News';
 import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
 
-const App = () => {
+const App = (props) => {
+  
   return (
   <BrowserRouter> {/* create routing in the entire app  */}
     <div className='app-wrapper'> 
       <Header />
       <Navbar />
       <div className='app-wrapper_content'>
-        <Route path='/profile' component={Profile}/>
-        <Route path='/dialogs' component={Dialogs}/>
+        <Route path='/profile' render={ () => <Profile state={props.state.profilePage}/> }/>
+        <Route path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage}/> }/>
         <Route path='/news' component={News}/>
         <Route path='/music' component={Music}/>
         <Route path='/settings' component={Settings}/>
