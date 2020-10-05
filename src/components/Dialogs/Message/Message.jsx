@@ -13,11 +13,13 @@ let sendMessage = () =>{
 }
     
     return(<div>
-        <div className={ds.message}>{props.message}</div>
-        <div>
-        <textarea ref={newMessageElement}></textarea>
-        </div>
-        <button onClick={sendMessage}>send</button>
+                <div>
+                    <div className={ds.message}>{props.message}</div>
+                </div>
+                <div>
+                <textarea ref={newMessageElement}></textarea>
+                </div>
+                <button onClick={sendMessage}>Send</button>
         </div>
     )
 }
