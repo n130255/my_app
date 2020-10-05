@@ -12,19 +12,23 @@ import Settings from './components/Settings/Settings';
 const App = (props) => {
   
   return (
-  <BrowserRouter> {/* create routing in the entire app  */}
     <div className='app-wrapper'> 
       <Header />
       <Navbar />
       <div className='app-wrapper_content'>
-        <Route path='/profile' render={ () => <Profile state={props.state.profilePage}/> }/>
-        <Route path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage}/> }/>
+        <Route path='/profile'
+               render={ () => <Profile 
+                      profilePage={props.state.profilePage} 
+                      addPost={props.addPost} 
+                      updateNewPostText={props.updateNewPostText}/>}/>
+        <Route path='/dialogs'
+               render={ () => <Dialogs
+                      state={props.state.dialogsPage}/> }/>
         <Route path='/news' component={News}/>
         <Route path='/music' component={Music}/>
         <Route path='/settings' component={Settings}/>
       </div>
     </div>
-  </BrowserRouter>
   );
 }
 
