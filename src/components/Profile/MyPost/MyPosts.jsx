@@ -1,7 +1,7 @@
 import React from 'react';
 import pi from "./MyPosts.module.css";  //pi-profile items
 import Post from './Post/Post';
-import {addPostActionCreator,updateNewPostTextActionCreator} from '../../../redux/state'
+import {addPostActionCreator,updateNewPostTextActionCreator} from '../../../redux/profile-reducer'
 
 const MyPosts = (props) => {
 
